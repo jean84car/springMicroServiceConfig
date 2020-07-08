@@ -2,4 +2,4 @@ server:
   port: 8005
 
 configuracion:
-  texto: Texto de configuracion desarrollo.
+  texto: Texto de configuracion desarrollo para valiable.

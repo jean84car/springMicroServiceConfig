@@ -2,7 +2,7 @@ quarkus:
   application:
     name: usuario-service
   http:
-    port: 8683
+    port: 8280
   log:
     level: INFO
     console:

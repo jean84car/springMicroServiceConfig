@@ -1,0 +1,27 @@
+quarkus:
+  application:
+    name: usuario-service
+  http:
+    port: 8683
+  log:
+    level: INFO
+    console:
+      format: "%d{HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n"
+    file:
+      enable: true
+      path: C:\Users\hp\OneDrive\Documents\eclipse\Quarkus\usuario-service\target\usuario-service.log
+      format: "%d{dd-MM-yyyy HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n"
+      rotation:
+        max-backup-index: 50
+        max-file-size: 100M
+        file-suffix: .yyyy-MM-dd-hh
+        rotate-on-boot: true
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: jeanjean
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/quarkus_db
+  hibernate-orm:
+    database:
+      generation: update

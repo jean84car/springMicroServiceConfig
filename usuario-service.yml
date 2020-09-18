@@ -9,7 +9,7 @@ quarkus:
       format: "%d{HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n"
     file:
       enable: true
-      path: C:\Users\hp\OneDrive\Documents\eclipse\Quarkus\usuario-service\target\usuario-service.log
+      path: /tmp/usuario-service.log
       format: "%d{dd-MM-yyyy HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n"
       rotation:
         max-backup-index: 50
@@ -19,9 +19,9 @@ quarkus:
   datasource:
     db-kind: postgresql
     username: postgres
-    password: jeanjean
+    password: 123456
     jdbc:
-      url: jdbc:postgresql://localhost:5432/quarkus_db
+      url: jdbc:postgresql://192.168.1.139:5432/quarkus_db
   hibernate-orm:
     database:
       generation: update

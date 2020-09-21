@@ -1,0 +1,28 @@
+quarkus:
+  application:
+    name: oauth-server
+  http:
+    port: 8180
+  log:
+    level: INFO
+    console:
+      format: "%d{HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n"
+    file:
+      enable: true
+      path: /tmp/oauth-server.log
+      format: "%d{HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n"
+      rotation:
+        max-backup-index: 50
+        max-file-size: 100M
+        file-suffix: .yyyy-MM-dd-hh
+        rotate-on-boot: true
+
+com:
+  quarkus:
+    oauthserver:
+      client:
+        IUsuarioRestClient/mp-rest/url: http://usuario-service:8280
+
+jwt:
+  privatekey: /work/keystore/jeanPrivate.pem
+  publickey: /work/keystore/jean.pem
